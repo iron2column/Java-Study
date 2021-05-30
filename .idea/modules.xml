@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/02-Operator/02-Operator.iml" filepath="$PROJECT_DIR$/02-Operator/02-Operator.iml" />
       <module fileurl="file://$PROJECT_DIR$/03-Choose/03-Choose.iml" filepath="$PROJECT_DIR$/03-Choose/03-Choose.iml" />
       <module fileurl="file://$PROJECT_DIR$/04-Initialize/04-Initialize.iml" filepath="$PROJECT_DIR$/04-Initialize/04-Initialize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-Combination/05-Combination.iml" filepath="$PROJECT_DIR$/05-Combination/05-Combination.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java-Study.iml" filepath="$PROJECT_DIR$/Java-Study.iml" />
     </modules>
   </component>
