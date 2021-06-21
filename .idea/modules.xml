@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/05-Combination/05-Combination.iml" filepath="$PROJECT_DIR$/05-Combination/05-Combination.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-Polymorphism/06-Polymorphism.iml" filepath="$PROJECT_DIR$/06-Polymorphism/06-Polymorphism.iml" />
       <module fileurl="file://$PROJECT_DIR$/07-Interface/07-Interface.iml" filepath="$PROJECT_DIR$/07-Interface/07-Interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-Innerclass/08-Innerclass.iml" filepath="$PROJECT_DIR$/08-Innerclass/08-Innerclass.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java-Study.iml" filepath="$PROJECT_DIR$/Java-Study.iml" />
     </modules>
   </component>
