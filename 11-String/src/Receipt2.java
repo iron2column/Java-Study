@@ -20,7 +20,7 @@ public class Receipt2 {
         receipt.printTitle();
         receipt.print("Jack' Magic Beans", 4, 4.25);
         receipt.print("Princess Peas", 3, 5.1);
-        receipt.print("Three Bears Porridge", 1, 14.29);
+        receipt.print("Three Bears Porridge", 1, 1.29);
         receipt.printTotal();
     }
 
