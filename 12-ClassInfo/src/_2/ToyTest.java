@@ -10,8 +10,8 @@ interface Shoots{}
 interface MyInter{}
 
 class Toy {
-    //Toy() {
-    //}
+    Toy() {
+    }
     Toy(int i){}
 }
 
