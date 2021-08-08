@@ -1,7 +1,6 @@
 package _3.PetCount;
 
 import _3.*;
-import _3.PetCreator.ForNameCreator;
 import _3.PetCreator.PetCreator;
 
 import java.util.HashMap;
@@ -61,6 +60,7 @@ public class PetCount {
 
     /**
      * 内部类：为什么要继承HashMap?
+     * 实现了toString
      */
     static class PetCounter extends HashMap<String, Integer> {
         public void count(String type) {
@@ -73,8 +73,11 @@ public class PetCount {
         }
     }
 
+    /*
+    -->TestPetCount
     public static void main(String[] args) {
         countPets(new ForNameCreator());
     }
+     */
 
 }

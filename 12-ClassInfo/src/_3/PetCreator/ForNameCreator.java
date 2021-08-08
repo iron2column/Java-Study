@@ -23,6 +23,7 @@ public class ForNameCreator extends PetCreator {
             "_3.Rat",
             "_3.Mouse",
             "_3.Hamster",
+            "_3.Gerbil"
     };
 
     static {
