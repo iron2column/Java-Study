@@ -1,5 +1,8 @@
 package _2;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 /**
  * @Author ChenMingYang
  * @Date 2021-08-04 14:58
@@ -12,7 +15,9 @@ interface MyInter{}
 class Toy {
     Toy() {
     }
-    Toy(int i){}
+    Toy(int i){
+        System.out.println("非默认构造器"+i);
+    }
 }
 
 class FancyToy extends Toy implements HasBatteries, Waterproof, Shoots,MyInter {
@@ -43,10 +48,12 @@ public class ToyTest {
             printInfo(face);
         }
 
+
         Class up = c.getSuperclass();
         Object obj = null;
         try {
             obj = up.newInstance();
+
         } catch (InstantiationException e) {
             System.out.println("Cannot instantiate");
             System.exit(1);
@@ -55,6 +62,22 @@ public class ToyTest {
             System.exit(1);
         }
         printInfo(obj.getClass());
+
+        System.out.println("---------------");
+
+
+        try {
+            Toy.class.getDeclaredConstructor(int.class).newInstance(717);
+
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
 
     }
 }
