@@ -6,6 +6,7 @@ package _3;
  */
 
 public class Pet extends Individual {
+
     public Pet() {
     }
 
