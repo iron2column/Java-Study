@@ -25,7 +25,7 @@ public class TwoTuple <A, B>{
         TwoTuple<Holder1, Holder2> tuple = new TwoTuple<Holder1, Holder2>(new Holder1(new Automobile()), new Holder2(new Automobile()));
         Holder1 first = tuple.first;
         Holder2 second = tuple.second;
-
+        //上面说明可以获取元素对象，下面说明不能更换元素对象
         //!tuple.first = new Holder1(new Automobile());
     }
 }
