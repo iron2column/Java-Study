@@ -1,5 +1,7 @@
 package _4;
 
+import _4._6.Sets;
+
 import java.lang.reflect.Method;
 import java.util.*;
 
@@ -30,8 +32,6 @@ public class ContainerMethodDifferences {
         for (Class<?> c : type.getInterfaces()) {
             result.add(c.getSimpleName());
         }
-
-        System.out.println(result);
     }
 
     static Set<String> object = methodSet(Object.class);
@@ -39,17 +39,16 @@ public class ContainerMethodDifferences {
     static {object.add("clone");}
 
     static void difference(Class<?> superset, Class<?> subset) {
-        System.out.println();
         System.out.print(superset.getSimpleName() + " extends " + subset.getSimpleName() + ", adds: ");
         Set<String> comp = Sets.difference(methodSet(superset), methodSet(subset));
         comp.removeAll(object);
         System.out.println(comp);
         interfaces(superset);
-        System.out.println();
 
     }
 
     public static void main(String[] args) {
+
         System.out.println("Collection: " + methodSet(Collection.class));
         interfaces(Collection.class);
 

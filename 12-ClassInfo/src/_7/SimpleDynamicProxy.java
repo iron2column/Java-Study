@@ -31,9 +31,11 @@ class DynamicProxyHandler implements InvocationHandler {
         System.out.println("**** proxy: " + proxy.getClass() +
                 ", method: " + method + ", args: " + args +
                 ", invoked at " + timeIn + " on " + (new Date()));
-        if(args != null)
-            for(Object arg : args)
+        if(args != null) {
+            for(Object arg : args) {
                 System.out.println("  " + args);
+            }
+        }
         long timeOut = new Date().getTime();
         System.out.println("Method call-return time: " + (timeOut - timeIn) + " msecs");
     }

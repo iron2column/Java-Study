@@ -1,4 +1,4 @@
-package _4;
+package _4._3;
 
 import _3.coffeeKind.Coffee;
 import _3.generator.CoffeeGenerator;
@@ -25,6 +25,12 @@ public class Generators {
     public static void main(String[] args) {
 
         Collection<Coffee> coffees = Generators.fill(new ArrayList<Coffee>(), new CoffeeGenerator(), 4);
+
+        System.out.println(coffees);
+        coffees = Generators.fill(coffees, new CoffeeGenerator(), 5);
+        System.out.println(coffees);
+
         Collection<Integer> fibonaciis = Generators.fill(new ArrayList<Integer>(), new Fibonacci(), 12);
+        System.out.println(fibonaciis);
     }
 }
