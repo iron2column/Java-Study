@@ -1,5 +1,7 @@
 package _3;
 
+import _3.generator.Generator;
+
 /**
  * @Author ChenMingYang
  * @Date 2021-08-16 10:28

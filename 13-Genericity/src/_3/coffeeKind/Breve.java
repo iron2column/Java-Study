@@ -1,4 +1,6 @@
-package _3;
+package _3.coffeeKind;
+
+import _3.coffeeKind.Coffee;
 
 /**
  * @Author ChenMingYang

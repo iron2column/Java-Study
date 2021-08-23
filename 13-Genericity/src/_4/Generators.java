@@ -1,9 +1,9 @@
 package _4;
 
-import _3.Coffee;
-import _3.CoffeeGenerator;
+import _3.coffeeKind.Coffee;
+import _3.generator.CoffeeGenerator;
 import _3.Fibonacci;
-import _3.Generator;
+import _3.generator.Generator;
 
 import java.util.ArrayList;
 import java.util.Collection;

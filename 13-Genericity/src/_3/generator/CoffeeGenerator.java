@@ -1,4 +1,6 @@
-package _3;
+package _3.generator;
+
+import _3.coffeeKind.*;
 
 import java.util.Iterator;
 import java.util.Random;
@@ -23,6 +25,20 @@ public class CoffeeGenerator implements Generator<Coffee>, Iterable<Coffee> {
     }
     //--------------------------------------------------------------------------------
 
+    /**
+     * 随机获取一个Coffee子类实例<br>
+     * 通过[反射][随机数][try-catch][类型强转]组合实现
+     * @return
+     */
+    public Coffee next() {
+        try {
+            return (Coffee) types[random.nextInt(types.length)].newInstance();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
     //--------------------------------------------------------------------------------
     //  内部类
     class CoffeeIterator implements Iterator<Coffee> {
@@ -42,23 +58,9 @@ public class CoffeeGenerator implements Generator<Coffee>, Iterable<Coffee> {
         }
     }
     //--------------------------------------------------------------------------------
-
-
     /**
-     * 随机获取一个Coffee子类实例
-     * @return
-     */
-    public Coffee next() {
-        try {
-            return (Coffee) types[random.nextInt(types.length)].newInstance();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    /**
-     * 实现for-each的唯一且必须途径
-     * 获取一个内部迭代器
+     * 实现for-each的唯一且必须途径<br>
+     * 获取一个内部迭代器,其实现了Iterator那么它就是Iterator
      * @return
      */
     public Iterator<Coffee> iterator() {

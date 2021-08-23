@@ -1,4 +1,4 @@
-package _3;
+package _3.coffeeKind;
 
 /**
  * @Author ChenMingYang
