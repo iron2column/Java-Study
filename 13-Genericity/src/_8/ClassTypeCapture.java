@@ -13,6 +13,10 @@ class Building {
 class House extends Building {
 }
 
+/**
+ * 类型擦除补偿1：instanceof
+ * @param <T>
+ */
 public class ClassTypeCapture<T> {
     Class<T> kind;
 
