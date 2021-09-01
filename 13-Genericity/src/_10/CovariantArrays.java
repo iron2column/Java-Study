@@ -23,6 +23,7 @@ class Orange extends Fruit {
  * <li>引用可以是基类</li>
  * <li>new可以是上面基类的导出类</li>
  * <li>向数组内添加对象时，其类型只能是「new对象」类型的本身或其导出类，不能是其基类</li>
+ * <li>补充，放入引用类型也是可以的，但是会报异常</li>
  */
 public class CovariantArrays {
     public static void main(String[] args) {
