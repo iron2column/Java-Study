@@ -17,6 +17,8 @@ public class CompilerIntelligence {
         //!boolean addOf2 = flist.add((Fruit) newOne);
         boolean contains = flist.contains(newOne);//false
         int i = flist.indexOf(new Apple());//-1
+        System.out.println(flist.contains(flist.get(0)));
+        System.out.println(flist.indexOf(flist.get(0)));
 
     }
 }
