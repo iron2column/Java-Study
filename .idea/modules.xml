@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/12-ClassInfo/12-ClassInfo.iml" filepath="$PROJECT_DIR$/12-ClassInfo/12-ClassInfo.iml" />
       <module fileurl="file://$PROJECT_DIR$/13-Genericity/13-Genericity.iml" filepath="$PROJECT_DIR$/13-Genericity/13-Genericity.iml" />
       <module fileurl="file://$PROJECT_DIR$/14-Array/14-Array.iml" filepath="$PROJECT_DIR$/14-Array/14-Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/15-Container/15-Container.iml" filepath="$PROJECT_DIR$/15-Container/15-Container.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java-Study.iml" filepath="$PROJECT_DIR$/Java-Study.iml" />
     </modules>
   </component>
