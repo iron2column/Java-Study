@@ -4,7 +4,7 @@
  */
 
 public class Ex1 {
-    static void func(BerylliumSphere[] spheres) {
+    static void func(_7._1.BerylliumSphere[] spheres) {
 
     }
 }

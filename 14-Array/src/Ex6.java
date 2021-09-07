@@ -6,12 +6,12 @@ import java.util.Arrays;
  */
 
 public class Ex6 {
-    public static BerylliumSphere[][] sphereAM(int size1, int size2) {
-        BerylliumSphere[][] result = new BerylliumSphere[size1][size2];
+    public static _7._1.BerylliumSphere[][] sphereAM(int size1, int size2) {
+        _7._1.BerylliumSphere[][] result = new _7._1.BerylliumSphere[size1][size2];
         for(int i = 0; i < size1; i++) {
-            result[i] = new BerylliumSphere[size2];
+            result[i] = new _7._1.BerylliumSphere[size2];
             for(int j = 0; j < size2; j++)
-                result[i][j] = new BerylliumSphere();
+                result[i][j] = new _7._1.BerylliumSphere();
         }
         return result;
     }

@@ -16,15 +16,15 @@ class BerylliumSphere {
 
 public class ContainerComparison {
     public static void main(String[] args) {
-        BerylliumSphere[] spheres = new BerylliumSphere[10];
+        _7._1.BerylliumSphere[] spheres = new _7._1.BerylliumSphere[10];
 
         System.out.println(Arrays.toString(spheres));
         System.out.println(spheres[4]);
 
 
-        List<BerylliumSphere> sphereList = new ArrayList<>();
+        List<_7._1.BerylliumSphere> sphereList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            sphereList.add(new BerylliumSphere());
+            sphereList.add(new _7._1.BerylliumSphere());
         }
         System.out.println(sphereList);
         System.out.println(sphereList.get(4));

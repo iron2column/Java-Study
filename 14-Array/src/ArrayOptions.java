@@ -7,21 +7,21 @@ import java.util.Arrays;
 
 public class ArrayOptions {
     public static void main(String[] args) {
-        BerylliumSphere[] a;
+        _7._1.BerylliumSphere[] a;
 
-        BerylliumSphere[] b = new BerylliumSphere[5];
+        _7._1.BerylliumSphere[] b = new _7._1.BerylliumSphere[5];
         System.out.println("b: " + Arrays.toString(b));
 
-        BerylliumSphere[] c = new BerylliumSphere[4];
+        _7._1.BerylliumSphere[] c = new _7._1.BerylliumSphere[4];
         for (int i = 0; i < c.length; i++) {
             if (c[i] == null) {
-                c[i] = new BerylliumSphere();
+                c[i] = new _7._1.BerylliumSphere();
             }
         }
-        BerylliumSphere[] d = {new BerylliumSphere(),
-                new BerylliumSphere(), new BerylliumSphere()};
+        _7._1.BerylliumSphere[] d = {new _7._1.BerylliumSphere(),
+                new _7._1.BerylliumSphere(), new _7._1.BerylliumSphere()};
 
-        a = new BerylliumSphere[]{new BerylliumSphere(), new BerylliumSphere()};
+        a = new _7._1.BerylliumSphere[]{new _7._1.BerylliumSphere(), new _7._1.BerylliumSphere()};
         System.out.println("a.length = " + a.length);
         System.out.println("b.length = " + b.length);
         System.out.println("c.length = " + c.length);

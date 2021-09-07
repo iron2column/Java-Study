@@ -1,3 +1,5 @@
+package _6._2;
+
 import _3.generator.Generator;
 
 /**
