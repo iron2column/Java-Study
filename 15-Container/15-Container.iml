@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="13-Genericity" />
+    <orderEntry type="module" module-name="14-Array" />
   </component>
 </module>
