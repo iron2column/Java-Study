@@ -1,7 +1,9 @@
 package _7._3;
 
 import _3.generator.Generator;
+import _6._3.Generated;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -11,14 +13,14 @@ import java.util.Random;
 
 public class CompType implements Comparable<CompType> {
     int i;
-    int j;
+    public int j;
     private static int count = 1;
     public CompType(int i, int j) {
         this.i = i;
         this.j = j;
     }
     public String toString() {
-        String result = "[i = " + i + ", j= " + j + "}";
+        String result = "[i = " + i + ", j= " + j + "]";
         if (count++ % 3 == 0) {
             result += "\n";
         }
@@ -40,6 +42,9 @@ public class CompType implements Comparable<CompType> {
     }
 
     public static void main(String[] args) {
-        // TODO 等待十七章 CompType[] a = Generated.array();
+        CompType[] a = Generated.array(new CompType[12], generator());
+        System.out.println("Arrays.toString(a) = " + Arrays.toString(a));
+        Arrays.sort(a);
+        System.out.println("Arrays.toString(a) = " + Arrays.toString(a));
     }
 }
