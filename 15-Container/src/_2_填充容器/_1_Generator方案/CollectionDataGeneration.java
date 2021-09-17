@@ -1,4 +1,4 @@
-package _2._1;
+package _2_填充容器._1_Generator方案;
 
 import _6._2.RandomGenerator;
 

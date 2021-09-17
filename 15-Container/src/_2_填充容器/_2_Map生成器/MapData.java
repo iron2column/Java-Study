@@ -1,4 +1,4 @@
-package _2._2;
+package _2_填充容器._2_Map生成器;
 
 import _3.generator.Generator;
 
@@ -11,8 +11,10 @@ import java.util.LinkedHashMap;
 
 public class MapData<K, V> extends LinkedHashMap<K, V> {
     public MapData(Generator<Pair<K, V>> gen, int quantity) {
-        Pair<K, V> p = gen.next();
-        put(p.key, p.value);
+        for (int i = 0; i < quantity; i++) {
+            Pair<K, V> p = gen.next();
+            put(p.key, p.value);
+        }
     }
 
     public MapData(Generator<K> genK, Generator<V> genV, int quantity) {

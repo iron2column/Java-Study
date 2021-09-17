@@ -1,6 +1,6 @@
 package _6._3;
 
-import _2._1.CollectionData;
+import _2_填充容器._1_Generator方案.CollectionData;
 import _3.generator.Generator;
 
 import java.lang.reflect.Array;

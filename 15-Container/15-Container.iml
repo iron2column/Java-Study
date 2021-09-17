@@ -9,5 +9,15 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="13-Genericity" />
     <orderEntry type="module" module-name="14-Array" />
+    <orderEntry type="library" name="Maven: junit:junit:4.13" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/GoogleFile/net.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
