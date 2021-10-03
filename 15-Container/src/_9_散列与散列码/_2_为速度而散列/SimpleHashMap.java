@@ -13,6 +13,7 @@ import java.util.*;
 public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
     //选择一个主要的数字作为hash表的尺寸，
     //以达到均匀分布
+    //数值越小 越容易冲突
     static final int SIZE = 997;
 
     //你不能有一个物理的泛型数组
@@ -44,12 +45,15 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
         //通过遍历器去遍历List，所以获取该List的遍历器
         ListIterator<MapEntry<K, V>> it = bucket.listIterator();
 
+        int counter = 0;
         while (it.hasNext()) {
+            counter++;
             MapEntry<K, V> iPair = it.next();
             if (iPair.getKey().equals(key)) {
                 oldValue = iPair.getValue();
                 it.set(pair);
                 found = true;
+                System.out.println("调用 "+counter+" 次next()");
                 break;
             }
         }
@@ -86,6 +90,18 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
             }
         }
         return set;
+    }
+
+    public V remove(Object key) {
+        int index = Math.abs(key.hashCode()) % SIZE;
+        LinkedList<MapEntry<K, V>> bucket = buckets[index];
+        bucket.remove(key);
+        return null;
+        // TODO: 2021/10/2  
+    }
+
+    public void clear() {
+        super.clear();
     }
 
     public static void main(String[] args) {
