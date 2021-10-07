@@ -11,6 +11,6 @@ import java.util.TreeSet;
 public class IndividualTest {
     public static void main(String[] args) {
         Set<Individual> pets = new TreeSet<>();
-        // TODO: 2021/10/3  
+        // TODO: 2021/10/3
     }
 }
