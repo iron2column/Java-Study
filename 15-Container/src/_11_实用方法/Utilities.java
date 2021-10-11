@@ -8,7 +8,7 @@ import java.util.*;
  */
 
 public class Utilities {
-    static List<String> list = Arrays.asList("one Two three Four five six one".split(" "));
+    public static List<String> list = Arrays.asList("one Two three Four five six one".split(" "));
 
     public static void main(String[] args) {
         System.out.println(list);
