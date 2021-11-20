@@ -27,7 +27,7 @@ public class DaemonDontRunFinally {
         t.setDaemon(true);
         t.start();
         //main线程如果不等待，则守护线程的finally不会运行，这是为什么？
-        //TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(2);
 
     }
 }
