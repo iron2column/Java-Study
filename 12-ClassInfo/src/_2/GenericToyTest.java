@@ -1,7 +1,5 @@
 package _2;
 
-import java.util.Collections;
-
 /**
  * @Author ChenMingYang
  * @Date 2021-08-06 17:20

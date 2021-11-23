@@ -1,6 +1,5 @@
 package _3.PetCount;
 
-import _3.Pet;
 import _3.PetCreator.ForNameCreator;
 import _3.PetCreator.PetCreator;
 import _3.Pets.Pets;

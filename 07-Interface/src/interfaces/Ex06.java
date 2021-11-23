@@ -1,10 +1,9 @@
 package interfaces;
 
-import sun.security.util.ArrayUtil;
-
 import java.io.IOException;
 import java.nio.CharBuffer;
-import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
 
 /**
  * @Author ChenMingYang

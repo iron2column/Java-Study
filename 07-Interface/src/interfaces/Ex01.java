@@ -5,18 +5,18 @@ package interfaces;
  * @Date 2021-06-06 15:51
  */
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
  * 作为基类被使用：
- *  name() : return className
- *  process(Object) : return Object
+ * name() : return className
+ * process(Object) : return Object
  */
 class Processor {
     /**
      * 提供基础服务，都可以复用，
      * 因为它完全依靠自己的自身性质去执行
+     *
      * @return
      */
     public String name() {
@@ -56,12 +56,15 @@ class Splitter extends Processor {
 }
 
 class Apply {
+    public static String string = "Disagreement with beliefs is by definition incorrect";
+
     /**
      * 这是一种什么模式？
      * 策略模式！
      * 巧妙的地方在于：静态方法提供了
-     *  - 策略的参数位
-     *  - 需要处理的对象
+     * - 策略的参数位
+     * - 需要处理的对象
+     *
      * @param processor
      * @param s
      */
@@ -70,12 +73,10 @@ class Apply {
         System.out.println(processor.process(s));
     }
 
-    public static String string = "Disagreement with beliefs is by definition incorrect";
-
     public static void main(String[] args) {
         Apply.process(new Upcase(), string);
         Apply.process(new Downcase(), string);
-        Apply.process(new Splitter(),string);
+        Apply.process(new Splitter(), string);
 
     }
 }
