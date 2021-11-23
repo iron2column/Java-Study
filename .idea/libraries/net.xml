@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="net">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Downloads/GoogleFile/net.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../000-env/010-lib/011-jar/net.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
