@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Pair -> {x,y}
- * 线程不安全 <br>
+ * 线程不安全，因为有两个变量需要维护成相同值<br>
  * x -> getX/incrementX <br>
  * y -> getY/incrementY <br>
  */
@@ -220,6 +220,7 @@ public class CriticalSection {
     }
 
     static void testApproaches(PairManager pman1, PairManager pman2) {
+
         ExecutorService exec = Executors.newCachedThreadPool();
 
         PairManipulator
