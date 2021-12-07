@@ -1,0 +1,46 @@
+Compiled from "ThreadLocalVariableHolder.java"
+final class _3_共享受限资源._7_线程本地存储.ThreadLocalVariableHolder$1 extends java.lang.ThreadLocal<java.lang.Integer> {
+  _3_共享受限资源._7_线程本地存储.ThreadLocalVariableHolder$1();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/ThreadLocal."<init>":()V
+       4: aload_0
+       5: new           #2                  // class java/util/Random
+       8: dup
+       9: ldc2_w        #3                  // long 47l
+      12: invokespecial #5                  // Method java/util/Random."<init>":(J)V
+      15: putfield      #6                  // Field rand:Ljava/util/Random;
+      18: return
+
+  protected synchronized java.lang.Integer initialValue();
+    Code:
+       0: aload_0
+       1: getfield      #6                  // Field rand:Ljava/util/Random;
+       4: invokevirtual #7                  // Method java/util/Random.nextInt:()I
+       7: invokestatic  #8                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      10: areturn
+
+  protected java.lang.Object initialValue();
+    Code:
+       0: aload_0
+       1: invokevirtual #9                  // Method initialValue:()Ljava/lang/Integer;
+       4: areturn
+}
+
+
+Compiled from "ThreadLocalVariableHolder.java"
+public class _3_共享受限资源._7_线程本地存储.ThreadLocalVariableHolder {
+  public _3_共享受限资源._7_线程本地存储.ThreadLocalVariableHolder();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  static {};
+    Code:
+       0: new           #2                  // class _3_共享受限资源/_7_线程本地存储/ThreadLocalVariableHolder$1
+       3: dup
+       4: invokespecial #3                  // Method _3_共享受限资源/_7_线程本地存储/ThreadLocalVariableHolder$1."<init>":()V
+       7: putstatic     #4                  // Field value:Ljava/lang/ThreadLocal;
+      10: return
+}
