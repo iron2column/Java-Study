@@ -22,11 +22,27 @@ public class OrnamentalGarden {
             exec.execute(new Entrance(i));
         }
 
+        //The World!
         TimeUnit.SECONDS.sleep(3);
 
+        //一键标记所有任务为取消:此后run()便结束
         Entrance.cancel();
 
+        //结束多线程
         exec.shutdown();
+
+        if (!exec.awaitTermination(250, TimeUnit.MILLISECONDS)) {
+            System.out.println("有部分任务没有被终止！");
+        }
+
+        int totalCount = Entrance.getTotalCount();
+        System.out.println("\n\n\nTotal: " + totalCount);
+        int sum = Entrance.sumEntrances();
+        System.out.println("Sum of Entrances: "+ sum);
+
+        if (sum != totalCount) {
+            System.out.println("check whether the `Count#increment() has the `synchronized");
+        }
 
     }
 }
@@ -39,11 +55,15 @@ class Count {
 
     private Random rand = new Random(47);
 
-    //todo rm keyword->'synchronized' to see the result
+    //fixme rm keyword->'synchronized' to see the result
+    // no diff?
+    // there is diff:
+    // if you hava the synchronized , the result should be `Total`==`Sum of Entrance`
+    // otherwise,they aren't equal
 
     /**
-     * 计数器增加1
-     *
+     * 计数器增加1<br>
+     * 加锁因为count是全局的，多个线程会访问方法
      * @return
      */
     public synchronized int increment() {
@@ -53,8 +73,8 @@ class Count {
     }
 
     /**
-     * 获取当前记数
-     *
+     * 获取当前记数<br>
+     * 加锁因为count是全局的，多个线程会访问方法
      * @return
      */
     public synchronized int value() {
@@ -83,7 +103,7 @@ class Entrance implements Runnable {
      */
     private final int id;
     /**
-     * 安置一个计数器
+     * 安置一个计数器（全局）
      */
     private static Count count = new Count();
     /**
@@ -118,10 +138,10 @@ class Entrance implements Runnable {
     public void run() {
         while (!canceled) {//没有取消就一直运行
             synchronized (this) {
-                ++number;
+                ++number;//校验保障处
             }
 
-            System.out.println(this + " 总计： " + count.increment());
+            System.out.println(this + " | 全场唯一的计数器count= " + count.increment());//功能器的作用处
 
             try {
                 TimeUnit.MILLISECONDS.sleep(100);
@@ -129,20 +149,25 @@ class Entrance implements Runnable {
                 System.out.println("睡眠被中断");
             }
 
-            System.out.println("正在停止 "+this);
         }
+        System.out.println("正在停止 "+this);
     }
 
     public synchronized int getValue() {
         return number;
     }
 
+    /**
+     * 计数器的最后数值
+     * @return
+     */
     public static int getTotalCount() {
         return count.value();
     }
 
     /**
-     * 总计流量
+     * 总计流量<br>
+     * 求和每个入口的number
      * @return
      */
     public static int sumEntrances() {
@@ -155,7 +180,7 @@ class Entrance implements Runnable {
 
     @Override
     public String toString() {
-        return "入口 " + id + ": " + getValue();
+        return "入口-" + id + "的number=: " + getValue();
     }
 }
 
