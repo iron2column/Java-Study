@@ -3,7 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="09-HoldObjects" target="8" />
-      <module name="Java-Study" target="8" />
+      <module name="Java-Study" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
